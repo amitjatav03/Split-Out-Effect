@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: whyte;
+    src: url(Whyte-Bold.ttf);
+}
+
+
+.explore-page{
+    background: linear-gradient(to bottom, #104E73, #1B2838);
+}
+
+.left-cont img, .right-cont img{
+    position: absolute;
+    width: 250px;
+    top: 60%;
+    transform: translateY(-50%);
+    /* transition: all .3s ease-in; */
+}
+
+@keyframes fadeLastImg {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .3;
+    }
+    
+}
+
+.card1{
+    height: 35%;
+    right: 65%;
+    border-radius: 10px;
+    z-index: 0;
+    transition: all .3s ease-in;
+    opacity: .3;
+    animation-name: fadeLastImg;
+    animation-duration: .3s;
+}
+
+.card2{
+    height: 45%;
+    right: 60%;
+    border-radius: 10px;
+    z-index: 1;
+    transition: all .3s ease-in;
+}
+
+.card3{
+    height: 55%;
+    right: 45%;
+    border-radius: 10px;
+    z-index: 2;
+    transition: all .3s ease-in;
+}
+
+.card4{
+    height: 65%;
+    right: 30%;
+    border-radius: 10px;
+    z-index: 3;
+    transition: all .3s ease-in;
+}
+
+.card5{
+    height: 75%;
+    right: 15%;
+    border-radius: 10px;
+    z-index: 4;
+    transition: all .3s ease-in;
+}
+
+.card6{
+    height: 85%;
+    right: 0;
+    z-index: 5;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: all .05s ease-in;
+    float: right;
+    animation-name: splitOutLeft;
+    animation-duration: .4s;
+}
+
+@keyframes splitOutLeft{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 250px;
+    }
+}
+
+
+
+
+
+.rcard1{
+    height: 35%;
+    left: 65%;
+    z-index: 0; 
+    border-radius: 10px;
+    transition: all .3s ease-in;
+    opacity: .3;
+    animation-name: fadeLastImg;
+    animation-duration: .3s;
+}
+
+
+.rcard2{
+    height: 45%;
+    left: 60%;
+    z-index: 1;
+    border-radius: 10px;
+    transition: all .3s ease-in;
+}
+
+.rcard3{
+    height: 55%;
+    left: 45%;
+    z-index: 2;
+    border-radius: 10px;
+    transition: all .3s ease-in;
+}
+
+.rcard4{
+    height: 65%;
+    left: 30%;
+    z-index: 3;
+    border-radius: 10px;
+    transition: all .3s ease-in;
+}
+
+.rcard5{
+    height: 75%;
+    left: 15%;
+    z-index: 4;
+    border-radius: 10px;
+    transition: all .3s ease-in;
+}
+
+.rcard6{
+    height: 85%;
+    left: 0;
+    z-index: 5;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all .05s ease-in;
+    animation-name: splitOutLeft;
+    animation-duration: 0.3s;
+}
+
+
+.custom-card::before,
+.custom-card::after{
+    content: '';
+    position: absolute;
+    background-color: #1E293B;
+    /* z-index: 2; */
+}
+
+
+.custom-card::before{
+    left: -.8rem;
+    bottom: 0rem;
+    width: 20%;
+    height: 50%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: inherit;
+}
+
+
+.custom-card::after{
+    position: absolute;
+    background-color: #1E293B;
+    width: 20px;
+    height: 40px;
+    left: -.2rem;
+    bottom: 44%;
+    transform: rotate(45deg);
+    border-radius: inherit;
+}
+
+
+.custom-card img{
+    position: absolute;
+    z-index: 50;
+    width: 90%;
+    bottom: 0;
+}
+
+
